@@ -1,6 +1,6 @@
 # Varunraj Amirtharaj — Personal Portfolio Website
 
-[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-00f5ff?style=for-the-badge&logo=github&logoColor=white)](https://hawkwheels.github.io/)
+[![GitHub Pages](https://img.shields.io/badge/GitHub%20Pages-Live%20Site-00f5ff?style=for-the-badge&logo=github&logoColor=white)](https://hawkwheels.github.io/Profile/)
 [![Role](https://img.shields.io/badge/Role-Senior%20Security%20Consultant-0284c7?style=for-the-badge)](https://www.linkedin.com/in/varunraj-amirtharaj-35b59512a/?isSelfProfile=true)
 [![Specialization](https://img.shields.io/badge/Focus-AppSec%20%26%20DevSecOps-a855f7?style=for-the-badge)](#specializations)
 [![Certifications](https://img.shields.io/badge/Credentials-CRTP%20%7C%20CEH%20%7C%20CC%20%7C%20AZ--900-10b981?style=for-the-badge)](#certifications)
