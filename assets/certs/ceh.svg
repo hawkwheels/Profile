@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <linearGradient id="cehGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#991b1b"/>
+      <stop offset="60%" stop-color="#450a0a"/>
+      <stop offset="100%" stop-color="#18181b"/>
+    </linearGradient>
+    <filter id="cehShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Outer Crest -->
+  <circle cx="60" cy="60" r="54" fill="url(#cehGrad)" stroke="#b91c1c" stroke-width="2.5" filter="url(#cehShadow)"/>
+  <circle cx="60" cy="60" r="46" fill="#0f172a" stroke="#ef4444" stroke-width="1.2" stroke-dasharray="2 2"/>
+  <!-- EC-Council C|EH Emblem -->
+  <text x="60" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="8" fill="#fca5a5" text-anchor="middle" letter-spacing="1.5">EC-COUNCIL</text>
+  <rect x="25" y="40" width="70" height="30" rx="6" fill="#7f1d1d" stroke="#dc2626" stroke-width="1"/>
+  <text x="60" y="62" font-family="'JetBrains Mono', 'Segoe UI', monospace" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle" letter-spacing="1">C|EH</text>
+  <text x="60" y="82" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="8.5" fill="#f87171" text-anchor="middle" letter-spacing="1">VERSION 11</text>
+  <text x="60" y="96" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="6.5" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">CERTIFIED ETHICAL HACKER</text>
+</svg>

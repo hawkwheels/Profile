@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <linearGradient id="azGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0284c7"/>
+      <stop offset="50%" stop-color="#0369a1"/>
+      <stop offset="100%" stop-color="#082f49"/>
+    </linearGradient>
+    <filter id="azShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Hexagon / Octagon Emblem -->
+  <polygon points="60,6 104,20 114,60 104,100 60,114 16,100 6,60 16,20" fill="url(#azGrad)" stroke="#38bdf8" stroke-width="2.5" filter="url(#azShadow)"/>
+  <polygon points="60,12 98,24 106,60 98,96 60,108 22,96 14,60 22,24" fill="#082f49" stroke="#7dd3fc" stroke-width="1"/>
+  <!-- Microsoft 4-square flag -->
+  <g transform="translate(48, 22)">
+    <rect x="0" y="0" width="10" height="10" fill="#f25022"/>
+    <rect x="13" y="0" width="10" height="10" fill="#7fba00"/>
+    <rect x="0" y="13" width="10" height="10" fill="#00a4ef"/>
+    <rect x="13" y="13" width="10" height="10" fill="#ffb900"/>
+  </g>
+  <!-- AZ-900 Ribbon -->
+  <rect x="24" y="52" width="72" height="22" rx="6" fill="#0284c7" stroke="#38bdf8" stroke-width="1"/>
+  <text x="60" y="68" font-family="'JetBrains Mono', 'Segoe UI', monospace" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle" letter-spacing="1">AZ-900</text>
+  <!-- Subtitle -->
+  <text x="60" y="86" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="7.5" fill="#bae6fd" text-anchor="middle" letter-spacing="0.5">AZURE FUNDAMENTALS</text>
+  <text x="60" y="98" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="6.5" fill="#7dd3fc" text-anchor="middle" letter-spacing="1">MICROSOFT CERTIFIED</text>
+</svg>

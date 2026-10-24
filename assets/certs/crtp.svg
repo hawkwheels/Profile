@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <linearGradient id="crtpGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#b91c1c"/>
+      <stop offset="50%" stop-color="#7f1d1d"/>
+      <stop offset="100%" stop-color="#450a0a"/>
+    </linearGradient>
+    <filter id="badgeShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Shield Background -->
+  <path d="M60 6 L104 22 V60 C104 88 60 114 60 114 C60 114 16 88 16 60 V22 Z" fill="url(#crtpGrad)" stroke="#ef4444" stroke-width="2.5" filter="url(#badgeShadow)"/>
+  <path d="M60 12 L98 26 V58 C98 82 60 106 60 106 C60 106 22 82 22 58 V26 Z" fill="#0f172a" opacity="0.85"/>
+  <!-- Crossed Swords & Crosshair -->
+  <circle cx="60" cy="46" r="20" stroke="#ef4444" stroke-width="1.5" stroke-dasharray="3 3"/>
+  <circle cx="60" cy="46" r="14" stroke="#f87171" stroke-width="1.5"/>
+  <line x1="60" y1="22" x2="60" y2="70" stroke="#fca5a5" stroke-width="1" stroke-opacity="0.5"/>
+  <line x1="36" y1="46" x2="84" y2="46" stroke="#fca5a5" stroke-width="1" stroke-opacity="0.5"/>
+  <!-- Altered Security / CRTP text -->
+  <text x="60" y="52" font-family="'JetBrains Mono', 'Segoe UI', sans-serif" font-weight="900" font-size="14" fill="#ffffff" text-anchor="middle" letter-spacing="1">CRTP</text>
+  <rect x="24" y="68" width="72" height="16" rx="4" fill="#dc2626"/>
+  <text x="60" y="80" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="8" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">RED TEAM</text>
+  <text x="60" y="96" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="6.5" fill="#fca5a5" text-anchor="middle" letter-spacing="1">ALTERED SECURITY</text>
+</svg>

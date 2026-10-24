@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" width="120" height="120" fill="none">
+  <defs>
+    <linearGradient id="iscGrad" x1="0" y1="0" x2="120" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#047857"/>
+      <stop offset="60%" stop-color="#064e3b"/>
+      <stop offset="100%" stop-color="#022c22"/>
+    </linearGradient>
+    <filter id="iscShadow" x="-10%" y="-10%" width="120%" height="120%">
+      <feDropShadow dx="0" dy="4" stdDeviation="4" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+  <!-- Circular Badge -->
+  <circle cx="60" cy="60" r="54" fill="url(#iscGrad)" stroke="#10b981" stroke-width="2.5" filter="url(#iscShadow)"/>
+  <circle cx="60" cy="60" r="46" fill="#061c14" stroke="#34d399" stroke-width="1.2"/>
+  <!-- (ISC)2 Knot & CC mark -->
+  <text x="60" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="10" fill="#a7f3d0" text-anchor="middle" letter-spacing="1">(ISC)²</text>
+  <!-- CC Center Box -->
+  <rect x="32" y="42" width="56" height="30" rx="8" fill="#047857" stroke="#6ee7b7" stroke-width="1.5"/>
+  <text x="60" y="64" font-family="'Plus Jakarta Sans', sans-serif" font-weight="900" font-size="20" fill="#ffffff" text-anchor="middle" letter-spacing="2">CC</text>
+  <!-- Subtitle -->
+  <text x="60" y="85" font-family="'Plus Jakarta Sans', sans-serif" font-weight="700" font-size="7.5" fill="#34d399" text-anchor="middle" letter-spacing="0.5">CERTIFIED IN</text>
+  <text x="60" y="96" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="7.5" fill="#ffffff" text-anchor="middle" letter-spacing="0.5">CYBERSECURITY</text>
+</svg>
