@@ -8,12 +8,14 @@
 document.addEventListener('DOMContentLoaded', () => {
 
   /* --------------------------------------------------------------------------
-     1. FLOATING NAVBAR THEME DETECTOR & SCROLLSPY
+     1. FLOATING NAVBAR THEME DETECTOR & SCROLLSPY (OPTIMIZED RAF)
      -------------------------------------------------------------------------- */
   const navbar = document.getElementById('navbar');
   const sections = document.querySelectorAll('section[id], .section-wrap-trackrecord');
   const navLinks = document.querySelectorAll('.nav-bar-link[data-target]');
   const body = document.body;
+
+  let isTicking = false;
 
   const updateNavbarState = () => {
     const scrollY = window.scrollY;
@@ -63,34 +65,54 @@ document.addEventListener('DOMContentLoaded', () => {
         link.classList.remove('active');
       }
     });
+
+    isTicking = false;
   };
 
-  window.addEventListener('scroll', updateNavbarState, { passive: true });
+  const onScroll = () => {
+    if (!isTicking) {
+      window.requestAnimationFrame(updateNavbarState);
+      isTicking = true;
+    }
+  };
+
+  window.addEventListener('scroll', onScroll, { passive: true });
   updateNavbarState();
 
   /* --------------------------------------------------------------------------
-     2. MOBILE MENU TOGGLE
+     2. MOBILE MENU TOGGLE WITH ACCESSIBILITY
      -------------------------------------------------------------------------- */
   const menuToggle = document.getElementById('menu-toggle');
   const navMenu = document.getElementById('nav-menu');
 
   if (menuToggle && navMenu) {
+    const setMenuOpen = (isOpen) => {
+      if (isOpen) {
+        navMenu.classList.add('is-open');
+        menuToggle.setAttribute('aria-expanded', 'true');
+      } else {
+        navMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+      }
+    };
+
     menuToggle.addEventListener('click', (e) => {
       e.stopPropagation();
-      navMenu.classList.toggle('is-open');
+      const currentlyOpen = navMenu.classList.contains('is-open');
+      setMenuOpen(!currentlyOpen);
     });
 
     // Close on clicking outside
     document.addEventListener('click', (e) => {
       if (!navMenu.contains(e.target) && e.target !== menuToggle) {
-        navMenu.classList.remove('is-open');
+        setMenuOpen(false);
       }
     });
 
     // Close when clicking a nav link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('is-open');
+        setMenuOpen(false);
       });
     });
   }

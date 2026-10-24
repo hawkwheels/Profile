@@ -418,20 +418,6 @@ body.nav-on-light .nav-bar-link-accent:hover {
   display: block;
 }
 
-/* Typography Accents */
-.lower-case {
-  text-transform: uppercase;
-  font-style: normal;
-  font-weight: 800;
-  color: var(--color-lightgreen);
-}
-
-.upper-case {
-  text-transform: uppercase;
-  font-style: normal;
-  font-weight: 800;
-}
-
 /* Hero Footer Status Bar */
 .header-status-bar {
   display: grid;

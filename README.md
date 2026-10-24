@@ -45,10 +45,20 @@ Senior Security Consultant with **9+ years of experience** across Application Se
 ├── css/
 │   └── styles.css                       # Fluid liquid glass styling & design tokens
 ├── js/
-│   └── main.js                          # Mouse reflection, copy toast, and modal logic
+│   └── main.js                          # Theme spy, scroll handlers, copy toast & menu
 └── assets/
-    ├── profile.jpg                      # Profile photograph
-    └── Varunraj_Amirtharaj_Resume.pdf   # Official downloadable resume
+    ├── profile.jpg                      # Profile photograph (Hero & Footer Capsule)
+    ├── Varunraj_Amirtharaj_Resume.pdf   # Official sanitized downloadable resume
+    ├── certs/                           # Vector certification badge emblems
+    │   ├── crtp.svg                     # CRTP Certified Red Team Professional / Pentester
+    │   ├── ceh.svg                      # CEH v11 Certified Ethical Hacker
+    │   ├── isc2-cc.svg                  # (ISC)² Certified in Cybersecurity
+    │   └── az-900.svg                   # Microsoft Azure Fundamentals AZ-900
+    └── logos/                           # Corporate company logos (Track Record)
+        ├── bnp-paribas.png              # BNP Paribas
+        ├── cdw.png                      # Sirius Computer Solutions (CDW)
+        ├── infosys.png                  # Infosys Limited
+        └── wipro.png                    # Wipro Technologies
 ```
 
 ---
