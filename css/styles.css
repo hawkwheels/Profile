@@ -330,17 +330,18 @@ body.nav-on-light .nav-bar-link-accent:hover {
   display: block;
 }
 
-/* Stylized lower-case / upper-case character accents from Nick Velten */
+/* Typography Accents */
 .lower-case {
-  text-transform: lowercase;
-  font-style: italic;
-  font-weight: 700;
+  text-transform: uppercase;
+  font-style: normal;
+  font-weight: 800;
   color: var(--color-lightgreen);
 }
 
 .upper-case {
   text-transform: uppercase;
   font-style: normal;
+  font-weight: 800;
 }
 
 /* Hero Footer Status Bar */
@@ -677,20 +678,36 @@ body.nav-on-light .nav-bar-link-accent:hover {
   display: inline-flex;
   align-items: center;
   align-self: flex-start;
-  max-width: 260px;
-  opacity: 0.9;
   transition: opacity var(--transition-fast), transform var(--transition-fast);
 }
 
-.trackrecord-logo:hover {
-  opacity: 1;
-  transform: translateX(4px);
+.trackrecord-logo-wrap {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.85rem 1.4rem;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 14px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  transition: all var(--transition-fast);
+}
+
+.section-trackrecord-slide[data-bg-section="green"] .trackrecord-logo-wrap {
+  background: rgba(0, 0, 0, 0.18);
+  border-color: rgba(200, 245, 208, 0.22);
+}
+
+.trackrecord-logo-wrap:hover {
+  transform: translateY(-2px);
+  border-color: rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.1);
 }
 
 .trackrecord-logo-svg {
-  height: 42px;
+  height: 44px;
   width: auto;
-  fill: currentColor;
+  display: block;
 }
 
 /* The Timeline Runner Bar with SVG Arrow Tip (Nick Velten Signature Component) */
@@ -1266,11 +1283,9 @@ body.nav-on-light .nav-bar-link-accent:hover {
 .footer-h2-span-first,
 .footer-h2-span-last {
   display: inline-block;
-}
-
-.footer-h2-span-first .lower-case,
-.footer-h2-span-last .lower-case {
-  color: #10261d;
+  font-weight: 800;
+  text-transform: uppercase;
+  color: var(--color-primary);
 }
 
 /* The Embedded Photo Capsule Pill */
