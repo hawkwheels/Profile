@@ -64,6 +64,8 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: var(--color-dark);
+  overflow-x: clip;
+  max-width: 100vw;
 }
 
 body {
@@ -71,7 +73,8 @@ body {
   color: var(--color-light);
   background-color: var(--color-dark);
   line-height: 1.5;
-  overflow-x: hidden;
+  overflow-x: clip;
+  max-width: 100vw;
   position: relative;
   width: 100%;
 }
@@ -130,6 +133,83 @@ ul, ol {
 }
 
 /* --------------------------------------------------------------------------
+   2.5. LIQUID GLASS AMBIENT CANVAS & BLURRED LIGHT BLOBS
+   -------------------------------------------------------------------------- */
+.liquid-ambient-canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.liquid-light-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.28;
+  mix-blend-mode: screen;
+  will-change: transform;
+}
+
+.blob-cyan {
+  width: 550px;
+  height: 550px;
+  background: radial-gradient(circle, rgba(0, 245, 255, 0.45) 0%, rgba(0, 245, 255, 0) 70%);
+  top: -150px;
+  right: -100px;
+  animation: floatLiquidBlob1 24s ease-in-out infinite alternate;
+}
+
+.blob-emerald {
+  width: 600px;
+  height: 600px;
+  background: radial-gradient(circle, rgba(16, 185, 129, 0.38) 0%, rgba(16, 185, 129, 0) 70%);
+  bottom: 10%;
+  left: -150px;
+  animation: floatLiquidBlob2 28s ease-in-out infinite alternate;
+}
+
+.blob-violet {
+  width: 480px;
+  height: 480px;
+  background: radial-gradient(circle, rgba(99, 102, 241, 0.32) 0%, rgba(99, 102, 241, 0) 70%);
+  top: 45%;
+  right: 15%;
+  animation: floatLiquidBlob3 32s ease-in-out infinite alternate;
+}
+
+.blob-gold {
+  width: 400px;
+  height: 400px;
+  background: radial-gradient(circle, rgba(200, 245, 208, 0.25) 0%, rgba(200, 245, 208, 0) 70%);
+  bottom: -100px;
+  right: 25%;
+  animation: floatLiquidBlob1 30s ease-in-out infinite alternate-reverse;
+}
+
+@keyframes floatLiquidBlob1 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(60px, 80px) scale(1.12) rotate(60deg); }
+  100% { transform: translate(-40px, 40px) scale(0.92) rotate(120deg); }
+}
+
+@keyframes floatLiquidBlob2 {
+  0% { transform: translate(0, 0) scale(1) rotate(0deg); }
+  50% { transform: translate(-50px, -60px) scale(1.15) rotate(-45deg); }
+  100% { transform: translate(50px, -30px) scale(0.95) rotate(-90deg); }
+}
+
+@keyframes floatLiquidBlob3 {
+  0% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(40px, -50px) scale(1.08); }
+  100% { transform: translate(-30px, 40px) scale(0.94); }
+}
+
+/* --------------------------------------------------------------------------
    3. FLOATING PILL NAVIGATION (NICK VELTEN SIGNATURE BAR)
    -------------------------------------------------------------------------- */
 .main-nav-bar {
@@ -158,9 +238,11 @@ ul, ol {
   align-items: center;
   justify-content: center;
   position: relative;
-  padding: 0.65rem 1.25rem;
+  padding: 0.65rem 1.35rem;
   border-radius: 9999px;
-  background-color: var(--color-darkgray);
+  background: rgba(20, 25, 36, 0.72);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--color-light);
   font-family: var(--font-mono);
   font-size: 0.8rem;
@@ -168,24 +250,26 @@ ul, ol {
   letter-spacing: 0.02em;
   text-transform: uppercase;
   overflow: hidden;
-  border: 1px solid var(--border-dark);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.45);
-  transition: color var(--transition-fast), background-color var(--transition-fast), border-color var(--transition-fast), transform var(--transition-fast);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 8px 24px rgba(0, 0, 0, 0.35);
+  transition: all var(--transition-fast);
   cursor: pointer;
   white-space: nowrap;
 }
 
 .nav-bar-link:hover,
 .nav-bar-link.active {
-  background-color: var(--color-light);
+  background: rgba(255, 255, 255, 0.95);
   color: var(--color-dark);
-  border-color: var(--color-light);
+  border-color: rgba(255, 255, 255, 0.95);
+  box-shadow: 0 10px 30px rgba(0, 245, 255, 0.25), inset 0 1px 1px #ffffff;
 }
 
 .nav-bar-link-accent {
-  background: var(--color-lightgreen);
+  background: linear-gradient(135deg, rgba(200, 245, 208, 0.95) 0%, rgba(16, 185, 129, 0.9) 100%);
   color: var(--color-dark);
-  border-color: var(--color-lightgreen);
+  border-color: rgba(200, 245, 208, 0.9);
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.6), 0 8px 24px rgba(16, 185, 129, 0.3);
   font-weight: 700;
 }
 
@@ -194,14 +278,17 @@ ul, ol {
   color: var(--color-dark);
   border-color: var(--color-white);
   transform: translateY(-1px);
+  box-shadow: 0 10px 28px rgba(200, 245, 208, 0.45);
 }
 
 /* Light Section State For Floating Navbar */
 body.nav-on-light .nav-bar-link {
-  background-color: var(--color-white);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
   color: var(--color-dark);
-  border-color: var(--border-light);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  border-color: rgba(10, 13, 20, 0.15);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.8), 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 body.nav-on-light .nav-bar-link:hover,
@@ -209,12 +296,13 @@ body.nav-on-light .nav-bar-link.active {
   background-color: var(--color-dark);
   color: var(--color-white);
   border-color: var(--color-dark);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
 }
 
 body.nav-on-light .nav-bar-link-accent {
-  background-color: var(--color-dark);
+  background: linear-gradient(135deg, rgba(16, 38, 29, 0.95) 0%, rgba(10, 13, 20, 0.95) 100%);
   color: var(--color-lightgreen);
-  border-color: var(--color-dark);
+  border-color: rgba(16, 185, 129, 0.4);
 }
 
 body.nav-on-light .nav-bar-link-accent:hover {
@@ -258,11 +346,11 @@ body.nav-on-light .nav-bar-link-accent:hover {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 25%;
-  opacity: 0.35;
-  filter: grayscale(100%) contrast(1.15) brightness(0.85);
+  object-position: center 16%;
+  opacity: 0.54;
+  filter: grayscale(100%) contrast(1.18) brightness(0.96);
   transform: scale(1.02);
-  transition: transform 1.2s var(--ease-out);
+  transition: transform 1.2s var(--ease-out), opacity 0.6s ease;
 }
 
 .header-image-dark-overlay {
@@ -272,9 +360,9 @@ body.nav-on-light .nav-bar-link-accent:hover {
   width: 100%;
   height: 100%;
   background: 
-    linear-gradient(180deg, rgba(10, 13, 20, 0.45) 0%, rgba(10, 13, 20, 0.75) 55%, var(--color-dark) 100%),
-    radial-gradient(circle at 80% 20%, rgba(0, 245, 255, 0.08), transparent 50%),
-    radial-gradient(circle at 20% 80%, rgba(16, 185, 129, 0.06), transparent 50%);
+    linear-gradient(180deg, rgba(10, 13, 20, 0.18) 0%, rgba(10, 13, 20, 0.52) 55%, var(--color-dark) 98%),
+    radial-gradient(circle at 75% 25%, rgba(0, 245, 255, 0.12), transparent 55%),
+    radial-gradient(circle at 25% 75%, rgba(16, 185, 129, 0.1), transparent 55%);
 }
 
 .header-content {
@@ -620,23 +708,33 @@ body.nav-on-light .nav-bar-link-accent:hover {
   gap: 2.5rem;
 }
 
-/* Quote Box with Left Border */
+/* Quote Box with Left Border & Liquid Glass Frosted Surface */
 .trackrecord-quote {
   position: relative;
-  padding-left: 1.5rem;
-  border-left: 2px solid var(--color-lightgreen);
+  padding: 1.5rem 1.8rem;
+  background: rgba(255, 255, 255, 0.04);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-left: 3px solid var(--color-lightgreen);
   font-size: clamp(1rem, 1.2vw, 1.15rem);
   line-height: 1.65;
   color: rgba(255, 255, 255, 0.88);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.08);
 }
 
 .section-trackrecord-slide[data-bg-section="green"] .trackrecord-quote {
   border-left-color: #a7f3d0;
+  border-color: rgba(200, 245, 208, 0.15);
+  background: rgba(200, 245, 208, 0.04);
   color: #e6f9f0;
 }
 
 .section-trackrecord-slide[data-bg-section="slate"] .trackrecord-quote {
   border-left-color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.15);
+  background: rgba(56, 189, 248, 0.04);
   color: #f0f9ff;
 }
 
@@ -673,7 +771,7 @@ body.nav-on-light .nav-bar-link-accent:hover {
   color: rgba(255, 255, 255, 0.85);
 }
 
-/* Company Logos */
+/* Company Logos (Enlarged while preserving sleek format & style) */
 .trackrecord-logo {
   display: inline-flex;
   align-items: center;
@@ -685,23 +783,27 @@ body.nav-on-light .nav-bar-link-accent:hover {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0.75rem 1.4rem;
-  background: #ffffff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 14px;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.25);
+  padding: 0.95rem 2rem;
+  background: rgba(255, 255, 255, 0.98);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 16px;
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.25), inset 0 1px 1px #ffffff;
   transition: all var(--transition-fast);
-  max-width: 220px;
+  max-width: 270px;
+  min-height: 68px;
 }
 
 .trackrecord-logo-wrap:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  transform: translateY(-3px) scale(1.02);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.35), inset 0 1px 1px #ffffff;
 }
 
 .trackrecord-logo-img {
-  height: 42px;
-  max-width: 180px;
+  height: clamp(50px, 5.2vw, 64px);
+  max-height: 64px;
+  max-width: 230px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -942,42 +1044,52 @@ body.nav-on-light .nav-bar-link-accent:hover {
 }
 
 .credential-card {
-  background-color: var(--color-white);
-  border: 1px solid var(--border-light);
-  border-radius: 16px;
-  padding: clamp(1.5rem, 2.5vw, 2.5rem);
+  background: rgba(255, 255, 255, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.85);
+  border-radius: 20px;
+  padding: clamp(1.6rem, 2.8vw, 2.6rem);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   gap: 1.5rem;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  box-shadow: 0 10px 30px rgba(10, 13, 20, 0.04), inset 0 1px 0 #ffffff;
   transition: transform var(--transition-fast), box-shadow var(--transition-fast), border-color var(--transition-fast);
 }
 
 .credential-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
-  border-color: rgba(0, 0, 0, 0.25);
+  transform: translateY(-5px);
+  box-shadow: 0 18px 40px rgba(10, 13, 20, 0.1), inset 0 1px 0 #ffffff;
+  border-color: rgba(0, 0, 0, 0.2);
 }
 
 .credential-card-header {
   display: flex;
   align-items: center;
-  gap: 1.25rem;
+  gap: 1.4rem;
 }
 
 .credential-logo-frame {
-  width: 64px;
-  height: 64px;
+  width: clamp(78px, 6.2vw, 90px);
+  height: clamp(78px, 6.2vw, 90px);
   flex-shrink: 0;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 14px;
-  background: #f8fafc;
-  border: 1px solid var(--border-light);
-  padding: 6px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+  border-radius: 18px;
+  background: rgba(248, 250, 252, 0.94);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+  padding: 8px;
+  box-shadow: inset 0 1px 2px rgba(255, 255, 255, 0.8), 0 6px 18px rgba(0, 0, 0, 0.05);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.credential-card:hover .credential-logo-frame {
+  transform: scale(1.04);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
 .credential-logo-img {
@@ -1062,8 +1174,11 @@ body.nav-on-light .nav-bar-link-accent:hover {
 }
 
 .project-spotlight-card {
-  background: linear-gradient(135deg, var(--color-darkgray) 0%, #0e1724 100%);
-  border: 1px solid var(--border-dark);
+  background: linear-gradient(135deg, rgba(20, 25, 36, 0.85) 0%, rgba(14, 23, 36, 0.92) 100%);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15), 0 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 24px;
   padding: clamp(2rem, 5vw, 4rem);
   display: grid;
@@ -1159,15 +1274,18 @@ body.nav-on-light .nav-bar-link-accent:hover {
 }
 
 .project-spotlight-preview {
-  background: rgba(0, 0, 0, 0.4);
-  border: 1px solid var(--border-dark);
+  background: rgba(0, 0, 0, 0.55);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 16px;
   padding: 1.5rem;
   font-family: var(--font-mono);
   font-size: 0.85rem;
   color: var(--color-lightgreen);
   line-height: 1.7;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.5), inset 0 1px 0 rgba(255, 255, 255, 0.08);
+  overflow-x: auto;
 }
 
 .code-pill {
@@ -1298,33 +1416,41 @@ body.nav-on-light .nav-bar-link-accent:hover {
   color: var(--color-primary);
 }
 
-/* The Embedded Photo Capsule Pill */
+/* The Embedded Photo Capsule Pill (Dennis Snellenberg Style - Full & Completed Portrait) */
 .footer-image-capsule {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  width: clamp(90px, 14vw, 190px);
-  height: clamp(55px, 8vw, 100px);
+  width: clamp(95px, 12.5vw, 155px);
+  height: clamp(95px, 12.5vw, 155px);
+  aspect-ratio: 1 / 1;
   border-radius: 9999px;
   overflow: hidden;
-  border: 3px solid var(--color-primary);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
-  background-color: var(--color-dark);
+  border: 3.5px solid var(--color-primary);
+  box-shadow: 0 14px 36px rgba(0, 0, 0, 0.18), inset 0 2px 4px rgba(255, 255, 255, 0.35);
+  background-color: #f7b731;
   flex-shrink: 0;
+  vertical-align: middle;
   transform: translateY(-2px);
+  transition: transform var(--transition-primary), box-shadow var(--transition-primary);
 }
 
 .footer-capsule-img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center 20%;
-  filter: contrast(1.1) brightness(0.95);
+  object-position: center 14%;
+  filter: contrast(1.06) brightness(0.98);
   transition: transform var(--transition-primary);
 }
 
+.footer-image-capsule:hover {
+  transform: scale(1.06) rotate(-2deg);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.25);
+}
+
 .footer-image-capsule:hover .footer-capsule-img {
-  transform: scale(1.1);
+  transform: scale(1.12);
 }
 
 /* Bottom Copyright & Attribution Bar */
@@ -1435,7 +1561,9 @@ body.nav-on-light .nav-bar-link-accent:hover {
 
 @media screen and (max-width: 768px) {
   :root {
-    --title-size: clamp(3.2rem, 15vw, 6rem);
+    --title-size: clamp(2.8rem, 13.5vw, 5.5rem);
+    --h2-size: clamp(2.2rem, 8vw, 4rem);
+    --section-padding: clamp(3rem, 6vw, 5rem);
   }
 
   .main-nav-bar {
@@ -1453,11 +1581,21 @@ body.nav-on-light .nav-bar-link-accent:hover {
     left: var(--container-padding);
     right: var(--container-padding);
     flex-direction: column;
-    background-color: var(--color-darkgray);
+    background: rgba(20, 25, 36, 0.92);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
     padding: 1rem;
     border-radius: 20px;
-    border: 1px solid var(--border-dark);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.7);
+    gap: 0.5rem;
+    z-index: 1001;
+  }
+
+  body.nav-on-light .nav-bar-links-expandable {
+    background: rgba(255, 255, 255, 0.94);
+    border: 1px solid rgba(10, 13, 20, 0.15);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
   }
 
   .nav-bar-links-expandable.is-open {
@@ -1482,5 +1620,121 @@ body.nav-on-light .nav-bar-link-accent:hover {
     flex-direction: column;
     gap: 1rem;
     text-align: center;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  .header-h1 {
+    line-height: 0.92;
+  }
+
+  .row-trackrecord-timeline-inner {
+    flex-wrap: wrap;
+    gap: 0.75rem;
+    justify-content: space-between;
+  }
+
+  .trackrecord-last {
+    white-space: normal;
+  }
+
+  .footer-h2 {
+    gap: 0.75rem 1rem;
+  }
+
+  .footer-image-capsule {
+    width: clamp(80px, 18vw, 110px);
+    height: clamp(80px, 18vw, 110px);
+  }
+
+  .toast-notification {
+    bottom: 1.25rem;
+    right: 1.25rem;
+    left: 1.25rem;
+    text-align: center;
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  :root {
+    --title-size: clamp(2.2rem, 11.5vw, 3.6rem);
+    --h2-size: clamp(1.85rem, 8vw, 2.6rem);
+    --container-padding: 1.15rem;
+  }
+
+  .header-h1 {
+    word-break: break-word;
+    letter-spacing: -0.03em;
+  }
+
+  .footer-h2 {
+    font-size: clamp(1.9rem, 10vw, 3rem);
+  }
+
+  .footer-image-capsule {
+    width: 76px;
+    height: 76px;
+    border-width: 2.5px;
+  }
+
+  .arrow-line {
+    display: none;
+  }
+
+  .trackrecord-logo-wrap {
+    padding: 0.75rem 1.4rem;
+    min-height: 56px;
+    max-width: 220px;
+  }
+
+  .trackrecord-logo-img {
+    height: 44px;
+    max-height: 48px;
+  }
+
+  .credential-logo-frame {
+    width: 68px;
+    height: 68px;
+    border-radius: 14px;
+    padding: 6px;
+  }
+
+  .credential-card-header {
+    gap: 1rem;
+  }
+
+  .credential-name {
+    font-size: 1.15rem;
+  }
+
+  .btn-editorial {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .social-pills-row {
+    gap: 0.4rem;
+  }
+
+  .link-social {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.78rem;
+  }
+
+  .link-email {
+    font-size: 0.85rem;
+    padding: 0.7rem 1.25rem;
+    word-break: break-all;
+  }
+
+  .trackrecord-quote {
+    padding: 1.2rem 1.25rem;
+    font-size: 0.95rem;
+  }
+
+  .liquid-light-blob {
+    filter: blur(60px);
+    opacity: 0.22;
   }
 }
