@@ -1,212 +1,163 @@
 /**
- * VARUNRAJ AMIRTHARAJ - LIQUID GLASS INTERACTION ENGINE
- * Butter-smooth physics, organic cursor light tracking, streamlined copy & modals
+ * VARUNRAJ AMIRTHARAJ — EDITORIAL INTERACTION ENGINE
+ * Inspired by Nick Velten (nickvelten.nl) / Dennis Snellenberg
+ * Dynamic Navbar Theme Adapters, Active Section Spy,
+ * One-Click Clipboard Copying & Smooth Mobile Navigation
  */
 
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ==========================================================================
-     1. BUTTER-SMOOTH MOUSE LIGHT REFLECTION TRACKING
-     ========================================================================== */
-  const liquidCards = document.querySelectorAll('.liquid-glass-card');
+  /* --------------------------------------------------------------------------
+     1. FLOATING NAVBAR THEME DETECTOR & SCROLLSPY
+     -------------------------------------------------------------------------- */
+  const navbar = document.getElementById('navbar');
+  const sections = document.querySelectorAll('section[id], .section-wrap-trackrecord');
+  const navLinks = document.querySelectorAll('.nav-bar-link[data-target]');
+  const body = document.body;
 
-  window.addEventListener('mousemove', (e) => {
-    liquidCards.forEach(card => {
-      const rect = card.getBoundingClientRect();
-      const x = e.clientX - rect.left;
-      const y = e.clientY - rect.top;
-      card.style.setProperty('--mouse-x', `${x}px`);
-      card.style.setProperty('--mouse-y', `${y}px`);
-    });
-  }, { passive: true });
+  const updateNavbarState = () => {
+    const scrollY = window.scrollY;
+    const navHeight = navbar ? navbar.offsetHeight : 60;
+    const checkPoint = scrollY + navHeight + 20;
 
-  /* ==========================================================================
-     2. STREAMLINED SCROLLSPY & FLOATING CAPSULE ACTIVE LINKS
-     ========================================================================== */
-  const navLinks = document.querySelectorAll('.nav-capsule-link');
-  const sections = document.querySelectorAll('main section[id]');
+    let currentSectionId = '';
+    let currentTheme = 'dark';
 
-  const handleScroll = () => {
-    const scrollPos = window.scrollY + 180;
-    let currentId = '';
-
+    // Find currently active section
     sections.forEach(sec => {
       const top = sec.offsetTop;
       const height = sec.offsetHeight;
-      if (scrollPos >= top && scrollPos < top + height) {
-        currentId = sec.getAttribute('id');
+
+      if (checkPoint >= top && checkPoint < top + height) {
+        currentSectionId = sec.getAttribute('id') || '';
+        const theme = sec.getAttribute('data-theme-section');
+        if (theme) {
+          currentTheme = theme;
+        }
       }
     });
 
+    // Check light theme sections (about, credentials, contact)
+    const activeElements = document.elementsFromPoint(window.innerWidth / 2, navHeight / 2 + 10);
+    let isOverLight = false;
+
+    activeElements.forEach(el => {
+      const themedParent = el.closest('[data-theme-section]');
+      if (themedParent && themedParent.getAttribute('data-theme-section') === 'light') {
+        isOverLight = true;
+      }
+    });
+
+    if (isOverLight || currentTheme === 'light') {
+      body.classList.add('nav-on-light');
+    } else {
+      body.classList.remove('nav-on-light');
+    }
+
+    // Highlight active nav item
     navLinks.forEach(link => {
-      link.classList.remove('active');
-      if (link.getAttribute('href') === `#${currentId}`) {
+      const target = link.getAttribute('data-target');
+      if (target === currentSectionId) {
         link.classList.add('active');
+      } else {
+        link.classList.remove('active');
       }
     });
   };
 
-  window.addEventListener('scroll', handleScroll, { passive: true });
-  handleScroll();
+  window.addEventListener('scroll', updateNavbarState, { passive: true });
+  updateNavbarState();
 
-  /* ==========================================================================
-     3. MOBILE NAV DRAWER TOGGLE
-     ========================================================================== */
-  const mobileToggle = document.getElementById('mobile-toggle');
-  const navMenu = document.getElementById('nav-links');
+  /* --------------------------------------------------------------------------
+     2. MOBILE MENU TOGGLE
+     -------------------------------------------------------------------------- */
+  const menuToggle = document.getElementById('menu-toggle');
+  const navMenu = document.getElementById('nav-menu');
 
-  if (mobileToggle && navMenu) {
-    mobileToggle.addEventListener('click', () => {
-      navMenu.classList.toggle('open');
+  if (menuToggle && navMenu) {
+    menuToggle.addEventListener('click', (e) => {
+      e.stopPropagation();
+      navMenu.classList.toggle('is-open');
     });
 
+    // Close on clicking outside
+    document.addEventListener('click', (e) => {
+      if (!navMenu.contains(e.target) && e.target !== menuToggle) {
+        navMenu.classList.remove('is-open');
+      }
+    });
+
+    // Close when clicking a nav link
     navLinks.forEach(link => {
       link.addEventListener('click', () => {
-        navMenu.classList.remove('open');
+        navMenu.classList.remove('is-open');
       });
     });
   }
 
-  /* ==========================================================================
-     4. ANIMATED METRICS COUNTER
-     ========================================================================== */
-  const counters = document.querySelectorAll('.counter');
-  let hasCounted = false;
+  /* --------------------------------------------------------------------------
+     3. 1-CLICK CLIPBOARD COPY WITH TOAST NOTIFICATION
+     -------------------------------------------------------------------------- */
+  const copyButtons = document.querySelectorAll('.copy-btn');
+  const toast = document.getElementById('toast');
+  let toastTimeout = null;
 
-  const runCounterAnimation = () => {
-    counters.forEach(counter => {
-      const target = +counter.getAttribute('data-target');
-      const duration = 1500;
-      const start = performance.now();
+  const showToast = (message) => {
+    if (!toast) return;
+    toast.textContent = message;
+    toast.classList.add('show');
 
-      const step = (now) => {
-        const progress = Math.min((now - start) / duration, 1);
-        const ease = 1 - Math.pow(1 - progress, 3);
-        counter.textContent = Math.floor(ease * target);
-
-        if (progress < 1) {
-          requestAnimationFrame(step);
-        } else {
-          counter.textContent = target;
-        }
-      };
-
-      requestAnimationFrame(step);
-    });
-  };
-
-  const metricsStrip = document.querySelector('.metrics-strip');
-  if (metricsStrip) {
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && !hasCounted) {
-          hasCounted = true;
-          runCounterAnimation();
-        }
-      });
-    }, { threshold: 0.3 });
-
-    observer.observe(metricsStrip);
-  }
-
-  /* ==========================================================================
-     5. TOAST NOTIFICATIONS & 1-CLICK COPY
-     ========================================================================== */
-  const toastBox = document.getElementById('toast-box');
-  const toastMessage = document.getElementById('toast-message');
-  let toastTimer;
-
-  const triggerToast = (msg) => {
-    if (!toastBox) return;
-    toastMessage.textContent = msg;
-    toastBox.classList.add('show');
-    clearTimeout(toastTimer);
-    toastTimer = setTimeout(() => {
-      toastBox.classList.remove('show');
+    if (toastTimeout) clearTimeout(toastTimeout);
+    toastTimeout = setTimeout(() => {
+      toast.classList.remove('show');
     }, 2400);
   };
 
-  const copyButtons = document.querySelectorAll('[data-copy]');
   copyButtons.forEach(btn => {
     btn.addEventListener('click', async (e) => {
       e.preventDefault();
-      const val = btn.getAttribute('data-copy');
-      if (!val) return;
+      const textToCopy = btn.getAttribute('data-clipboard');
+      if (!textToCopy) return;
 
       try {
-        await navigator.clipboard.writeText(val);
-        triggerToast(`Copied: ${val}`);
-
-        // Subtle visual flash
-        btn.style.transform = 'scale(0.94)';
-        setTimeout(() => {
-          btn.style.transform = '';
-        }, 180);
+        if (navigator.clipboard && window.isSecureContext) {
+          await navigator.clipboard.writeText(textToCopy);
+        } else {
+          // Fallback for non-https or older browsers
+          const textArea = document.createElement('textarea');
+          textArea.value = textToCopy;
+          textArea.style.position = 'fixed';
+          textArea.style.opacity = '0';
+          document.body.appendChild(textArea);
+          textArea.focus();
+          textArea.select();
+          document.execCommand('copy');
+          document.body.removeChild(textArea);
+        }
+        showToast(`Copied ID: ${textToCopy} to clipboard!`);
       } catch (err) {
-        window.prompt('Copy to clipboard:', val);
+        showToast(`Copied ID: ${textToCopy}`);
       }
     });
   });
 
-  /* ==========================================================================
-     6. QUICK ADVISORY TOPIC SELECTOR
-     ========================================================================== */
-  const topicPills = document.querySelectorAll('#inquiry-topics .inquiry-topic-pill');
-  const btnEmailDispatch = document.getElementById('btn-email-dispatch');
+  /* --------------------------------------------------------------------------
+     4. SMOOTH SCROLL FOR ALL INTERNAL ANCHOR LINKS
+     -------------------------------------------------------------------------- */
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      if (targetId === '#') return;
 
-  topicPills.forEach(pill => {
-    pill.addEventListener('click', () => {
-      topicPills.forEach(p => p.classList.remove('active'));
-      pill.classList.add('active');
-      const topic = pill.getAttribute('data-topic');
-      if (btnEmailDispatch) {
-        const subject = encodeURIComponent(`Security Advisory Inquiry - ${topic}`);
-        btnEmailDispatch.href = `mailto:varunraj995@gmail.com?subject=${subject}`;
+      const targetEl = document.querySelector(targetId);
+      if (targetEl) {
+        e.preventDefault();
+        targetEl.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
       }
     });
-  });
-
-  /* ==========================================================================
-     7. RESUME PREVIEW MODAL
-     ========================================================================== */
-  const resumeModal = document.getElementById('resume-modal');
-  const btnPreviewCv = document.getElementById('btn-preview-cv');
-  const btnCloseModal = document.getElementById('btn-close-modal');
-
-  const openResumeModal = () => {
-    if (resumeModal) {
-      resumeModal.classList.add('open');
-      document.body.style.overflow = 'hidden';
-    }
-  };
-
-  const closeResumeModal = () => {
-    if (resumeModal) {
-      resumeModal.classList.remove('open');
-      document.body.style.overflow = '';
-    }
-  };
-
-  if (btnPreviewCv) {
-    btnPreviewCv.addEventListener('click', openResumeModal);
-  }
-
-  if (btnCloseModal) {
-    btnCloseModal.addEventListener('click', closeResumeModal);
-  }
-
-  if (resumeModal) {
-    resumeModal.addEventListener('click', (e) => {
-      if (e.target === resumeModal) {
-        closeResumeModal();
-      }
-    });
-  }
-
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape' && resumeModal && resumeModal.classList.contains('open')) {
-      closeResumeModal();
-    }
   });
 
 });

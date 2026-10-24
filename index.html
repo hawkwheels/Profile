@@ -3,659 +3,698 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Varunraj Amirtharaj | Senior Security Consultant (AppSec & DevSecOps)</title>
-  <meta name="description" content="Portfolio of Varunraj Amirtharaj, Senior Security Consultant specializing in Application Security, DevSecOps CI/CD pipelines, STRIDE Threat Modeling, and Active Directory assessments. 9+ years experience.">
+  <title>Varunraj Amirtharaj — Senior Security Consultant x AppSec x DevSecOps</title>
+  <meta name="description" content="Portfolio of Varunraj Amirtharaj, Senior Security Consultant specializing in Application Security, DevSecOps CI/CD pipelines, STRIDE Threat Modeling, and Active Directory assessments. 9+ years experience across BNP Paribas, CDW, Infosys, and Wipro.">
   <meta name="author" content="Varunraj Amirtharaj">
 
-  <!-- Open Graph -->
-  <meta property="og:title" content="Varunraj Amirtharaj | Senior Security Consultant">
-  <meta property="og:description" content="Securing the SDLC & Enterprise Architecture with 9+ years experience across BNP Paribas, CDW, Infosys, and Wipro.">
+  <!-- Open Graph / Meta -->
+  <meta property="og:title" content="Varunraj Amirtharaj — Senior Security Consultant">
+  <meta property="og:description" content="Securing Modern Enterprise Architecture x AppSec x DevSecOps x Active Directory. 9+ years experience.">
   <meta property="og:image" content="assets/profile.jpg">
+  <meta property="og:type" content="website">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%23050813'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='44' fill='%2300f5ff'>VA</text></svg>">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><circle cx='50' cy='50' r='48' fill='%230a0d14'/><text x='50%' y='55%' dominant-baseline='middle' text-anchor='middle' font-family='monospace' font-weight='bold' font-size='42' fill='%23c8f5d0'>VA</text></svg>">
 
-  <!-- Google Fonts -->
+  <!-- Google Fonts: Editorial Sans & Mono -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,700&display=swap" rel="stylesheet">
 
   <!-- Stylesheet -->
   <link rel="stylesheet" href="css/styles.css">
 </head>
-<body>
+<body data-theme-page="dark">
 
-  <!-- Ambient Organic Liquid Light Pools Canvas -->
-  <div class="liquid-canvas-background" aria-hidden="true">
-    <div class="liquid-blob blob-cyan-top"></div>
-    <div class="liquid-blob blob-violet-right"></div>
-    <div class="liquid-blob blob-indigo-bottom"></div>
-    <div class="liquid-blob blob-cyan-bottom-right"></div>
-    <div class="fluid-mesh-overlay"></div>
-  </div>
+  <!-- ==========================================================================
+       FLOATING PILL NAVIGATION (NICK VELTEN SIGNATURE FLOATING BAR)
+       ========================================================================== -->
+  <header class="main-nav-bar" id="navbar">
+    <!-- Left Navigation Pill Links -->
+    <div class="nav-bar-links">
+      <button class="nav-bar-link nav-bar-link-menu" id="menu-toggle" aria-label="Toggle Navigation">
+        <span>Menu</span>
+      </button>
 
-  <!-- Floating Liquid Capsule Navbar -->
-  <header class="floating-nav-wrapper">
-    <nav class="floating-nav" aria-label="Main Navigation">
-      <a href="#hero" class="nav-brand">
-        <div class="brand-capsule-monogram">VA</div>
-        <span class="brand-capsule-name">Varunraj A.</span>
-      </a>
-
-      <ul class="nav-menu-links" id="nav-links">
-        <li><a href="#experience" class="nav-capsule-link">Experience</a></li>
-        <li><a href="#certifications" class="nav-capsule-link">Certifications</a></li>
-        <li><a href="#project" class="nav-capsule-link">Projects</a></li>
-        <li><a href="#contact" class="nav-capsule-link">Contact</a></li>
-      </ul>
-
-      <div class="nav-right-actions">
-        <div class="advisory-pill" title="Currently open for advisory engagements">
-          <span class="pulse-emerald-dot"></span>
-          <span>Available</span>
-        </div>
-
-        <a href="assets/Varunraj_Amirtharaj_Resume.pdf" download="Varunraj_Amirtharaj_Resume.pdf" class="btn btn-liquid-primary btn-sm" title="Download Official CV">
-          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-          <span>CV</span>
-        </a>
-
-        <button class="mobile-nav-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
-          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
-        </button>
+      <div class="nav-bar-links nav-bar-links-expandable" id="nav-menu">
+        <a href="#about" class="nav-bar-link" data-target="about">// About</a>
+        <a href="#track-record" class="nav-bar-link" data-target="track-record">// Track record</a>
+        <a href="#expertises" class="nav-bar-link" data-target="expertises">// Expertises</a>
+        <a href="#credentials" class="nav-bar-link" data-target="credentials">// Credentials</a>
+        <a href="#hub" class="nav-bar-link" data-target="hub">// Pentest Hub</a>
       </div>
-    </nav>
+    </div>
+
+    <!-- Right Navigation Direct Actions -->
+    <div class="nav-bar-links">
+      <a href="#contact" class="nav-bar-link" data-target="contact">// Contact</a>
+      <a href="assets/Varunraj_Amirtharaj_Resume.pdf" download="Varunraj_Amirtharaj_Resume.pdf" class="nav-bar-link nav-bar-link-accent" title="Download Official Resume PDF">
+        <span>CV.PDF</span>
+      </a>
+    </div>
   </header>
 
-  <main>
+  <main id="main">
 
-    <!-- STREAMLINED HERO SECTION -->
-    <section class="hero-streamlined" id="hero">
-      <div class="container">
-        
-        <div class="hero-main-card liquid-glass-card">
-          
-          <!-- Top Row: Compact Liquid Avatar (Small, Sleek, Glowing Halo) + Identity -->
-          <div class="hero-profile-row">
-            
-            <div class="compact-avatar-wrapper">
-              <div class="avatar-liquid-ring"></div>
-              <div class="avatar-inner-frame">
-                <img src="assets/profile.jpg" alt="Varunraj Amirtharaj" class="compact-profile-photo" loading="eager">
-              </div>
-              <div class="avatar-verified-badge" title="Verified Practitioner">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg>
-              </div>
-            </div>
-
-            <div class="hero-identity-text">
-              <div class="hero-badge-pill">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
-                <span>APPSEC & DEVSECOPS SPECIALIST</span>
-              </div>
-              
-              <h1 class="hero-name">Varunraj Amirtharaj</h1>
-              
-              <div class="hero-title-tagline">
-                <span class="highlight-role">Senior Security Consultant</span>
-                <span>•</span>
-                <span class="hero-company-pill">
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M3 10h18"/><path d="M5 6l7-3 7 3"/><path d="M4 10v11"/><path d="M20 10v11"/></svg>
-                  Assistant Manager @ BNP Paribas
-                </span>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- Headline & Mission Statement -->
-          <div class="hero-narrative-block">
-            <h2 class="hero-statement-headline">
-              Securing the SDLC & <span class="liquid-gradient-text">Enterprise Architecture</span>
-            </h2>
-            <p class="hero-statement-desc">
-              <strong>9+ years</strong> partnering with architecture and engineering teams to embed automated security into the heart of development. Specializing in automated CI/CD guardrails (SAST, DAST, SCA), proactive STRIDE threat modeling, and Active Directory assumed-breach assessments.
-            </p>
-          </div>
-
-          <!-- CTAs & Social Dock -->
-          <div class="hero-footer-row">
-            <div class="hero-cta-group">
-              <a href="assets/Varunraj_Amirtharaj_Resume.pdf" download="Varunraj_Amirtharaj_Resume.pdf" class="btn btn-liquid-primary">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                <span>Download CV</span>
-              </a>
-
-              <button class="btn btn-liquid-glass" id="btn-preview-cv">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-                <span>Preview CV</span>
-              </button>
-
-              <a href="#contact" class="btn btn-liquid-glass">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                <span>Get in Touch</span>
-              </a>
-            </div>
-
-            <div class="hero-social-dock">
-              <a href="https://www.linkedin.com/in/varunraj-amirtharaj-35b59512a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="social-dock-btn" aria-label="LinkedIn" title="LinkedIn Profile">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-              </a>
-              <a href="https://github.com/hawkwheels" target="_blank" rel="noopener noreferrer" class="social-dock-btn" aria-label="GitHub" title="GitHub (hawkwheels)">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-              <a href="https://hawkwheels.github.io/pentest-reference-site/#/" target="_blank" rel="noopener noreferrer" class="social-dock-btn" aria-label="Pentest Hub" title="HawkWheels Pentest Hub">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
-              </a>
-              <a href="mailto:varunraj995@gmail.com" class="social-dock-btn" aria-label="Email" title="varunraj995@gmail.com">
-                <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
+    <!-- ==========================================================================
+         HERO SECTION (OVERSIZED DISPLAY TYPOGRAPHY & CINEMATIC PORTRAIT)
+         ========================================================================== -->
+    <section id="header" data-theme-section="dark" class="section-header">
+      <!-- High-Contrast Portrait Background with Cinematic Film Overlay -->
+      <div class="header-image-container" aria-hidden="true">
+        <img src="assets/profile.jpg" alt="Varunraj Amirtharaj" class="header-image-img" loading="eager">
+        <div class="header-image-dark-overlay"></div>
       </div>
-    </section>
 
-    <!-- STREAMLINED 4-METRICS GLASS STRIP -->
-    <section class="metrics-strip-section">
       <div class="container">
-        <div class="metrics-strip liquid-glass-card">
-          
-          <div class="metric-strip-item">
-            <div class="metric-strip-num">
-              <span class="counter" data-target="9">9</span><span class="plus">+</span>
-            </div>
-            <div class="metric-strip-title">Years Experience</div>
-            <div class="metric-strip-subtitle">AppSec & DevSecOps</div>
-          </div>
-
-          <div class="metric-strip-item">
-            <div class="metric-strip-num">
-              <span class="counter" data-target="130">130</span><span class="plus">+</span>
-            </div>
-            <div class="metric-strip-title">Apps Assessed</div>
-            <div class="metric-strip-subtitle">Web, Mobile, Thick-Client, APIs</div>
-          </div>
-
-          <div class="metric-strip-item">
-            <div class="metric-strip-num">
-              <span class="counter" data-target="25">25</span><span class="plus">+</span>
-            </div>
-            <div class="metric-strip-title">Teams Led</div>
-            <div class="metric-strip-subtitle">BNP Paribas SDLC Program</div>
-          </div>
-
-          <div class="metric-strip-item">
-            <div class="metric-strip-num">
-              <span class="counter" data-target="5">5</span><span class="plus">+</span>
-            </div>
-            <div class="metric-strip-title">Enterprise Pentests</div>
-            <div class="metric-strip-subtitle">Active Directory Assumed-Breach</div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- BENTO SPLIT WORKSPACE: EXPERIENCE & CREDENTIALS -->
-    <section class="bento-workspace">
-      <div class="container">
-        <div class="bento-split-layout">
-          
-          <!-- LEFT COLUMN: PROFESSIONAL EXPERIENCE -->
-          <div class="experience-column-wrap" id="experience">
-            <div class="section-title-wrap">
-              <div>
-                <span class="section-heading-tag">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
-                  CAREER
-                </span>
-                <h2 class="section-heading-title">Professional Experience</h2>
-              </div>
+        <div class="header-content">
+          <div class="header-content-inner">
+            <!-- Function Kicker Text -->
+            <div class="header-function-text">
+              <p class="header-p">Senior Security Consultant x<br>AppSec x DevSecOps x Red Team</p>
             </div>
 
-            <div class="experience-flow-stack">
-              
-              <!-- 1. BNP Paribas -->
-              <article class="flow-card liquid-glass-card">
-                <span class="flow-present-pill">
-                  <span class="pulse-emerald-dot" style="width: 5px; height: 5px;"></span>
-                  Present
-                </span>
-
-                <div class="flow-card-head">
-                  <div class="flow-card-logo" title="BNP Paribas">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18"/><path d="M3 10h18"/><path d="M5 6l7-3 7 3"/><path d="M4 10v11"/><path d="M20 10v11"/></svg>
-                  </div>
-                  <div class="flow-card-info">
-                    <h3 class="flow-card-role">Assistant Manager (AppSec & SecOps)</h3>
-                    <div class="flow-card-company">BNP Paribas</div>
-                    <div class="flow-card-dates">July 2023 – Present</div>
-                  </div>
-                </div>
-
-                <ul class="flow-bullet-list">
-                  <li><strong>Security Champion Lead:</strong> Direct security governance across <strong>25+ product squads</strong>, guiding engineers in secure coding, threat modeling, and rapid triage.</li>
-                  <li><strong>DevSecOps Pipeline Gating:</strong> Integrated SCA, SAST, and DAST directly into GitLab CI/CD and Jenkins pipelines with automated compliance gates.</li>
-                  <li><strong>Architecture & STRIDE:</strong> Led design-level security architecture reviews and proactive threat modeling mapped to MITRE ATT&CK.</li>
-                </ul>
-
-                <div class="flow-tech-tags">
-                  <span class="flow-pill-tech">DevSecOps</span>
-                  <span class="flow-pill-tech">GitLab CI / Jenkins</span>
-                  <span class="flow-pill-tech">SAST / DAST / SCA</span>
-                  <span class="flow-pill-tech">STRIDE</span>
-                  <span class="flow-pill-tech">MITRE ATT&CK</span>
-                </div>
-              </article>
-
-              <!-- 2. Sirius / CDW -->
-              <article class="flow-card liquid-glass-card">
-                <div class="flow-card-head">
-                  <div class="flow-card-logo" title="Sirius / CDW">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  </div>
-                  <div class="flow-card-info">
-                    <h3 class="flow-card-role">Security Consultant (AppSec)</h3>
-                    <div class="flow-card-company">
-                      Sirius Computer Solutions <span class="acquired">(Acquired by CDW)</span>
-                    </div>
-                    <div class="flow-card-dates">Jan 2022 – July 2023</div>
-                  </div>
-                </div>
-
-                <ul class="flow-bullet-list">
-                  <li><strong>Adversarial Pentesting:</strong> Executed end-to-end security assessments across enterprise web applications, mobile (iOS/Android), thick clients, and APIs.</li>
-                  <li><strong>Active Directory Assumed-Breach:</strong> Identified privilege escalation vectors, Kerberos ticket exploits, and lateral movement paths within enterprise networks.</li>
-                </ul>
-
-                <div class="flow-tech-tags">
-                  <span class="flow-pill-tech">Web & API Pentest</span>
-                  <span class="flow-pill-tech">Active Directory</span>
-                  <span class="flow-pill-tech">Assumed Breach</span>
-                  <span class="flow-pill-tech">Mobile Security</span>
-                </div>
-              </article>
-
-              <!-- 3. Infosys -->
-              <article class="flow-card liquid-glass-card">
-                <div class="flow-card-head">
-                  <div class="flow-card-logo" title="Infosys">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 2 7 12 12 22 7 12 2"/></svg>
-                  </div>
-                  <div class="flow-card-info">
-                    <h3 class="flow-card-role">Senior Associate Consultant (AppSec)</h3>
-                    <div class="flow-card-company">Infosys</div>
-                    <div class="flow-card-dates">Feb 2020 – Jan 2022</div>
-                  </div>
-                </div>
-
-                <ul class="flow-bullet-list">
-                  <li><strong>Enterprise AppSec Reviews:</strong> Delivered comprehensive assessments across healthcare, finance, and retail platforms.</li>
-                  <li><strong>Automated Tooling:</strong> Built custom Python and Bash automation scripts for vulnerability triaging, saving 40+ hours per testing cycle.</li>
-                </ul>
-
-                <div class="flow-tech-tags">
-                  <span class="flow-pill-tech">Python & Bash</span>
-                  <span class="flow-pill-tech">OWASP Top 10</span>
-                  <span class="flow-pill-tech">FinTech & Health</span>
-                </div>
-              </article>
-
-              <!-- 4. Wipro -->
-              <article class="flow-card liquid-glass-card">
-                <div class="flow-card-head">
-                  <div class="flow-card-logo" title="Wipro">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="4" y="4" width="16" height="16" rx="2"/><circle cx="9" cy="9" r="2"/></svg>
-                  </div>
-                  <div class="flow-card-info">
-                    <h3 class="flow-card-role">Software Engineer (AppSec)</h3>
-                    <div class="flow-card-company">Wipro Technologies</div>
-                    <div class="flow-card-dates">Oct 2017 – Feb 2020</div>
-                  </div>
-                </div>
-
-                <ul class="flow-bullet-list">
-                  <li><strong>SAST & DAST Execution:</strong> Conducted static and dynamic testing on tier-1 web applications; managed vulnerability lifecycle tracking and developer closures.</li>
-                </ul>
-
-                <div class="flow-tech-tags">
-                  <span class="flow-pill-tech">Static Testing</span>
-                  <span class="flow-pill-tech">Dynamic Testing</span>
-                  <span class="flow-pill-tech">Vulnerability Triage</span>
-                </div>
-              </article>
-
-            </div>
-          </div>
-
-          <!-- RIGHT COLUMN: CERTIFICATIONS & COMPETENCIES -->
-          <div class="credentials-right-stack" id="certifications">
-            
-            <div class="section-title-wrap">
-              <div>
-                <span class="section-heading-tag">
-                  <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
-                  CREDENTIALS
-                </span>
-                <h2 class="section-heading-title">Certifications</h2>
-              </div>
-            </div>
-
-            <!-- 4 Verified Credential Cards with 1-Click Copy -->
-            <div class="cert-bento-grid">
-              
-              <!-- 1. CRTP -->
-              <div class="cert-compact-card liquid-glass-card">
-                <div class="cert-left-grp">
-                  <div class="cert-emblem" style="background: rgba(239, 68, 68, 0.15); color: #f87171; border-color: rgba(239, 68, 68, 0.3);">
-                    CRTP
-                  </div>
-                  <div class="cert-text-grp">
-                    <span class="cert-title-code">CRTP</span>
-                    <span class="cert-sub-org">Pentester Academy / Altered Security</span>
-                  </div>
-                </div>
-                <div class="cert-id-copy-pill" data-copy="ADLID4579" title="Click to copy credential ID">
-                  <span>ADLID4579</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                </div>
-              </div>
-
-              <!-- 2. CEH v11 -->
-              <div class="cert-compact-card liquid-glass-card">
-                <div class="cert-left-grp">
-                  <div class="cert-emblem" style="background: rgba(16, 185, 129, 0.15); color: #34d399; border-color: rgba(16, 185, 129, 0.3);">
-                    CEH
-                  </div>
-                  <div class="cert-text-grp">
-                    <span class="cert-title-code">CEH v11</span>
-                    <span class="cert-sub-org">EC-Council (Ethical Hacker)</span>
-                  </div>
-                </div>
-                <div class="cert-id-copy-pill" data-copy="ECC3268107954" title="Click to copy credential ID">
-                  <span>ECC3268107954</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                </div>
-              </div>
-
-              <!-- 3. CC (ISC2) -->
-              <div class="cert-compact-card liquid-glass-card">
-                <div class="cert-left-grp">
-                  <div class="cert-emblem" style="background: rgba(0, 245, 255, 0.15); color: #38bdf8; border-color: rgba(0, 245, 255, 0.3);">
-                    (ISC)²
-                  </div>
-                  <div class="cert-text-grp">
-                    <span class="cert-title-code">CC</span>
-                    <span class="cert-sub-org">Certified in Cybersecurity (ISC2)</span>
-                  </div>
-                </div>
-                <div class="cert-id-copy-pill" data-copy="1526990" title="Click to copy credential ID">
-                  <span>1526990</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                </div>
-              </div>
-
-              <!-- 4. AZ-900 (Microsoft) -->
-              <div class="cert-compact-card liquid-glass-card">
-                <div class="cert-left-grp">
-                  <div class="cert-emblem" style="background: rgba(59, 130, 246, 0.15); color: #60a5fa; border-color: rgba(59, 130, 246, 0.3);">
-                    AZ
-                  </div>
-                  <div class="cert-text-grp">
-                    <span class="cert-title-code">AZ-900</span>
-                    <span class="cert-sub-org">Microsoft Azure Fundamentals</span>
-                  </div>
-                </div>
-                <div class="cert-id-copy-pill" data-copy="H424 7660" title="Click to copy credential ID">
-                  <span>H424 7660</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- CORE SPECIALIZATIONS BLOCK -->
-            <div class="competencies-card liquid-glass-card">
-              
-              <div class="competency-item">
-                <div class="competency-header">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/></svg>
-                  <span>Application Security (AppSec)</span>
-                </div>
-                <p class="competency-desc">Black & White Box pentesting across Web, iOS/Android, APIs, and Thick Clients (OWASP / NIST).</p>
-                <div class="competency-tags">
-                  <span class="comp-pill">Web & API Pentest</span>
-                  <span class="comp-pill">Mobile iOS/Android</span>
-                  <span class="comp-pill">Burp Suite Pro</span>
-                </div>
-              </div>
-
-              <div class="competency-item">
-                <div class="competency-header">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                  <span>DevSecOps & CI/CD Pipelines</span>
-                </div>
-                <p class="competency-desc">Seamless integration of SCA, SAST, and DAST security gates in GitLab CI and Jenkins.</p>
-                <div class="competency-tags">
-                  <span class="comp-pill">GitLab CI</span>
-                  <span class="comp-pill">Jenkins</span>
-                  <span class="comp-pill">SonarQube / Semgrep</span>
-                  <span class="comp-pill">Dependency-Track</span>
-                </div>
-              </div>
-
-              <div class="competency-item">
-                <div class="competency-header">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                  <span>Threat Modeling & Red Teaming</span>
-                </div>
-                <p class="competency-desc">STRIDE architecture analysis, MITRE ATT&CK mitigation mapping, and Active Directory assumed-breach.</p>
-                <div class="competency-tags">
-                  <span class="comp-pill">STRIDE</span>
-                  <span class="comp-pill">MITRE ATT&CK</span>
-                  <span class="comp-pill">Active Directory</span>
-                </div>
-              </div>
-
-            </div>
-
-            <!-- EDUCATION PILL -->
-            <div class="liquid-glass-card" style="padding: 16px 20px; display: flex; align-items: center; justify-content: space-between;">
-              <div style="display: flex; align-items: center; gap: 10px;">
-                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-liquid)" stroke-width="2"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c3 3 9 3 12 0v-5"/></svg>
-                <span style="font-size: 13.5px; font-weight: 700; color: #ffffff;">Bachelor of Engineering (B.E.)</span>
-              </div>
-              <span style="font-size: 12px; font-family: var(--font-mono); color: var(--emerald-glow);">CGPA: 8.11</span>
-            </div>
-
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- FEATURED PROJECT & KNOWLEDGE BASE -->
-    <section class="project-section-wrap" id="project">
-      <div class="container">
-        
-        <div class="featured-project-glass liquid-glass-card">
-          <div>
-            <div class="project-badge-live">
-              <span class="pulse-emerald-dot" style="width: 6px; height: 6px;"></span>
-              <span>LIVE REFERENCE APPLICATION</span>
-            </div>
-            
-            <h3 class="project-hero-title">HawkWheels Pentest Reference Site</h3>
-            <p class="project-hero-desc">
-              An interactive, single-pane penetration testing knowledge base and command reference engineered by Varunraj Amirtharaj (hawkwheels). Designed for field security consultants assessing web applications, APIs, and Active Directory environments.
-            </p>
-
-            <div class="project-action-btns">
-              <a href="https://hawkwheels.github.io/pentest-reference-site/#/" target="_blank" rel="noopener noreferrer" class="btn btn-liquid-primary btn-sm">
-                <span>Launch Reference Hub</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-              </a>
-
-              <a href="https://github.com/hawkwheels" target="_blank" rel="noopener noreferrer" class="btn btn-liquid-glass btn-sm">
-                <span>GitHub (hawkwheels)</span>
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
-              </a>
-            </div>
-          </div>
-
-          <div class="project-right-preview-card">
-            <span class="preview-code-tag">// Core Toolsets & Repositories</span>
-            <ul class="preview-features-list">
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Exploit_Scripts:</strong> Web vulnerability PoCs</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Python / Bash:</strong> Automation triage tools</span>
-              </li>
-              <li>
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-                <span><strong>Active Directory:</strong> Attack methodologies</span>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-      </div>
-    </section>
-
-    <!-- STREAMLINED CONTACT & ADVISORY DOCK -->
-    <section class="contact-section-wrap" id="contact">
-      <div class="container">
-        
-        <div class="contact-glass-dock liquid-glass-card">
-          
-          <div class="contact-left-info">
-            <div>
-              <span class="section-heading-tag">
-                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-                GET IN TOUCH
+            <!-- Giant Stacked Editorial Display H1 -->
+            <h1 class="header-h1">
+              <span class="header-h1-span-top">
+                <span class="header-h1-inner"><span class="lower-case">Varunraj</span></span>
               </span>
-              <h2 class="section-heading-title" style="margin-top: 4px;">Direct Coordinates</h2>
+              <div class="header-h1-span-bottom">
+                <div class="header-h1-inner">
+                  <span class="lower-case">A</span><span class="upper-case">m</span><span class="lower-case">irtharaj</span>
+                </div>
+              </div>
+            </h1>
+
+            <!-- Status & Location Bar -->
+            <div class="header-status-bar">
+              <div class="status-indicator">
+                <span class="pulse-dot"></span>
+                <span>Chennai, India <span class="dot-separator">•</span> Global Advisory</span>
+              </div>
+              <div class="status-focus">
+                <span>9+ Years Fortifying Enterprise Systems</span>
+              </div>
+              <div class="scroll-hint">
+                <span>Scroll to explore</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M19 12l-7 7-7-7"/></svg>
+              </div>
             </div>
-            
-            <p style="font-size: 14px; color: var(--text-muted); line-height: 1.6;">
-              Available for DevSecOps architecture advisory, application security assessments, and technical consulting engagements.
-            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-            <div class="contact-cards-column">
-              
-              <!-- Email -->
-              <div class="contact-mini-row">
-                <div class="contact-icon-val">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
-                  <a href="mailto:varunraj995@gmail.com" class="contact-val-text">varunraj995@gmail.com</a>
-                </div>
-                <div class="cert-id-copy-pill" data-copy="varunraj995@gmail.com" title="Copy Email">
-                  <span>Copy</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
-                </div>
-              </div>
+    <!-- ==========================================================================
+         ABOUT / PHILOSOPHY SECTION (LIGHT CONTRAST THEME)
+         ========================================================================== -->
+    <section id="about" data-theme-section="light" class="section-intro">
+      <div class="container">
+        <div class="row-intro-title">
+          <h2 class="h-medium">SecuRity x EngineeRing</h2>
+        </div>
 
-              <!-- Location & Remote Availability -->
-              <div class="contact-mini-row">
-                <div class="contact-icon-val">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg>
-                  <span class="contact-val-text">Chennai, India (IST / UTC+5:30)</span>
-                </div>
-                <div class="cert-id-copy-pill" style="pointer-events: none; opacity: 0.9;">
-                  <span>Global Remote</span>
-                </div>
-              </div>
+        <div class="row-intro-text">
+          <div class="col-intro-text">
+            <p>With over <strong>9+ years of cybersecurity leadership</strong> across global banking institutions and technology giants, I specialize in architecting resilient defenses that empower high-velocity engineering teams rather than slowing them down.</p>
+            <br>
+            <p>From fortifying core financial transaction engines at <strong>BNP Paribas</strong> to leading penetration testing for Fortune 500 US clients at <strong>Sirius (CDW)</strong>, I combine deep offensive adversarial tradecraft with pragmatic architectural hardening.</p>
+          </div>
+          <div class="col-intro-text">
+            <p>My philosophy is straightforward: <strong>Security is an engineering accelerator</strong>, not a bureaucratic roadblock. When security is shifted left into CI/CD pipelines, modeled threats are mitigated early, and Active Directory environments are resilient against lateral movement, organizations innovate fearlessly.</p>
+            <br>
+            <p>Whether navigating complex regulatory compliance, standing up automated SAST/DAST guardrails, or conducting high-stakes red teaming, the objective is uniform: <strong>Measurable, uncompromised posture</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </section>
 
-              <!-- LinkedIn -->
-              <div class="contact-mini-row">
-                <div class="contact-icon-val">
-                  <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
-                  <a href="https://www.linkedin.com/in/varunraj-amirtharaj-35b59512a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="contact-val-text">LinkedIn Profile</a>
-                </div>
-                <a href="https://www.linkedin.com/in/varunraj-amirtharaj-35b59512a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="cert-id-copy-pill">
-                  <span>Open</span>
-                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                </a>
-              </div>
+    <!-- West / East Dual Journey Map (Offensive vs Defensive) -->
+    <section data-theme-section="light" class="section-westoost">
+      <div class="container">
+        <div class="row-westoost-title">
+          <div class="oostwest-title">Offensive</div>
+          <div class="oostwest-subtitle">Adversarial Mindset &amp; Engineering Rigor</div>
+          <div class="oostwest-title">Defensive</div>
+        </div>
 
+        <div class="row-westoost-arrows">
+          <svg class="svg-vector-line-curl" viewBox="0 0 668 120" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 60 H668" stroke="currentColor" stroke-width="1.5" stroke-dasharray="4 4" vector-effect="non-scaling-stroke"></path>
+          </svg>
+
+          <div class="single-tag-wrap">
+            <div class="single-tag">
+              <span class="tag-dot"></span>
+              <span>2017 — Systems &amp; Pentesting</span>
             </div>
           </div>
 
-          <!-- Quick Topic Advisory Trigger -->
-          <div class="contact-inquiry-box">
-            <span class="inquiry-title">Quick Advisory Dispatch</span>
-            <p style="font-size: 13px; color: var(--text-muted);">Select your primary area of inquiry to generate a pre-filled direct email:</p>
-            
-            <div class="inquiry-pills-row" id="inquiry-topics">
-              <button type="button" class="inquiry-topic-pill active" data-topic="DevSecOps & CI/CD Pipelines">DevSecOps Integration</button>
-              <button type="button" class="inquiry-topic-pill" data-topic="AppSec & Pentesting">AppSec Pentesting</button>
-              <button type="button" class="inquiry-topic-pill" data-topic="STRIDE Threat Modeling">STRIDE Architecture</button>
-              <button type="button" class="inquiry-topic-pill" data-topic="General Advisory">Technical Advisory</button>
+          <div class="single-tag-wrap">
+            <div class="single-tag">
+              <span class="tag-dot"></span>
+              <span>Fortune 500 &amp; Global Scope</span>
+            </div>
+          </div>
+
+          <div class="single-tag-wrap">
+            <div class="single-tag">
+              <span class="tag-dot"></span>
+              <span>Now — BNP Paribas (Active)</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="row-westoost-text">
+          <div class="col-westoost-text">
+            <p>Offensive tradecraft honed through <strong>CRTP Certified Active Directory assessments</strong>, web application vulnerability research, API exploits, and threat simulation that identifies true business risks before attackers do.</p>
+          </div>
+          <div class="col-westoost-text">
+            <p>Defensive engineering operationalized through <strong>automated CI/CD security gates</strong>, STRIDE threat models, container hardening, vulnerability management governance, and developer enablement workshops.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         TRACK RECORD SECTION (NICK VELTEN'S SIGNATURE FULL-WIDTH SLIDES)
+         ========================================================================== -->
+    <div id="track-record" class="section-wrap-trackrecord">
+      <div class="trackrecord-header-banner">
+        <div class="container">
+          <div class="trackrecord-supertitle">
+            <h2 class="h-medium">Track Record</h2>
+            <div class="trackrecord-years">( 2017 — PRESENT )</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Slide 1: BNP Paribas (Active Role) -->
+      <section data-theme-section="dark" data-bg-section="dark" class="section-trackrecord-slide">
+        <div class="container">
+          <div class="row-trackrecord">
+            <div class="col-trackrecord-title">
+              <span class="trackrecord-role-badge">Lead Security Practitioner // Current</span>
+              <h2 class="trackrecord-h">Assistant Manager<br>(AppSec &amp; SecOps)</h2>
             </div>
 
-            <div style="display: flex; gap: 10px; margin-top: 8px;">
-              <a href="mailto:varunraj995@gmail.com?subject=Security%20Advisory%20Inquiry%20-%20DevSecOps%20Integration" id="btn-email-dispatch" class="btn btn-liquid-primary" style="flex: 1;">
-                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
-                <span>Send Direct Email</span>
+            <div class="col-trackrecord-quote">
+              <div class="trackrecord-quote">
+                <p>• Spearhead <strong>application vulnerability management</strong> and DevSecOps security across mission-critical international banking systems.</p>
+                <p>• Orchestrate automated <strong>SAST, DAST, and SCA security gates</strong> inside enterprise CI/CD pipelines (GitLab CI, Jenkins).</p>
+                <p>• Conduct structured <strong>STRIDE threat modeling</strong> and cloud architecture reviews for high-risk financial applications.</p>
+                <p>• Drive security compliance governance, remediation workflows, and engineering advisory.</p>
+                
+                <div class="trackrecord-tags">
+                  <span class="trackrecord-tag">SAST / DAST / SCA</span>
+                  <span class="trackrecord-tag">GitLab CI &amp; Jenkins</span>
+                  <span class="trackrecord-tag">STRIDE Threat Modeling</span>
+                  <span class="trackrecord-tag">Banking Security Governance</span>
+                </div>
+              </div>
+
+              <!-- BNP Paribas SVG Logo -->
+              <div class="trackrecord-logo" title="BNP Paribas">
+                <svg class="trackrecord-logo-svg" viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Green Square with 4 dynamic flight stars -->
+                  <rect x="0" y="4" width="42" height="42" rx="4" fill="#00915a"/>
+                  <path d="M12 28 Q18 20 28 12 Q24 22 18 26 Z" fill="#ffffff"/>
+                  <path d="M18 34 Q24 26 34 18 Q30 28 24 32 Z" fill="#ffffff"/>
+                  <path d="M10 22 Q14 16 22 10 Q19 17 14 20 Z" fill="#ffffff"/>
+                  <path d="M22 38 Q28 32 38 24 Q34 34 28 36 Z" fill="#ffffff"/>
+                  <!-- Clean Typography -->
+                  <text x="54" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="22" fill="#ffffff" letter-spacing="1">BNP PARIBAS</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <!-- Iconic Timeline Runner Bar with SVG Arrow -->
+          <div class="row-trackrecord-timeline">
+            <div class="row-trackrecord-timeline-inner">
+              <p class="trackrecord-first">CHENNAI &amp; GLOBAL / 2023 — PRESENT (ACTIVE)</p>
+              <div class="arrow-line">
+                <div class="arrow-line-inner"></div>
+                <svg class="svg-arrow-tip" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="trackrecord-last">BNP PARIBAS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 2: Sirius Computer Solutions (CDW) -->
+      <section data-theme-section="dark" data-bg-section="green" class="section-trackrecord-slide">
+        <div class="container">
+          <div class="row-trackrecord">
+            <div class="col-trackrecord-title">
+              <span class="trackrecord-role-badge">US Enterprise Consulting</span>
+              <h2 class="trackrecord-h">Security Consultant<br>(AppSec)</h2>
+            </div>
+
+            <div class="col-trackrecord-quote">
+              <div class="trackrecord-quote">
+                <p>• Executed comprehensive <strong>penetration testing across web, mobile, REST/GraphQL APIs</strong>, and cloud workloads for Fortune 500 US clients.</p>
+                <p>• Uncovered critical <strong>business logic flaws, authorization bypasses, and injection vulnerabilities</strong> prior to production deployments.</p>
+                <p>• Partnered directly with client CISOs, development leads, and architects to prioritize pragmatic remediation.</p>
+                <p>• Authored comprehensive executive risk reports and tactical developer remediation blueprints.</p>
+
+                <div class="trackrecord-tags">
+                  <span class="trackrecord-tag">AppSec &amp; API Pentesting</span>
+                  <span class="trackrecord-tag">Burp Suite Pro</span>
+                  <span class="trackrecord-tag">OWASP Top 10</span>
+                  <span class="trackrecord-tag">Fortune 500 US Clients</span>
+                </div>
+              </div>
+
+              <!-- Sirius / CDW SVG Logo -->
+              <div class="trackrecord-logo" title="Sirius Computer Solutions (A CDW Company)">
+                <svg class="trackrecord-logo-svg" viewBox="0 0 240 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Sirius starburst & typography -->
+                  <circle cx="20" cy="25" r="14" stroke="#c8f5d0" stroke-width="2.5" stroke-dasharray="3 3"/>
+                  <circle cx="20" cy="25" r="6" fill="#c8f5d0"/>
+                  <text x="44" y="27" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="20" fill="#ffffff" letter-spacing="1">SIRIUS</text>
+                  <text x="44" y="41" font-family="'JetBrains Mono', monospace" font-weight="600" font-size="10" fill="#c8f5d0" letter-spacing="1.5">A CDW COMPANY</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-trackrecord-timeline">
+            <div class="row-trackrecord-timeline-inner">
+              <p class="trackrecord-first">DALLAS (REMOTE) &amp; CHENNAI / 2022 — 2023 (1.5 YEARS)</p>
+              <div class="arrow-line">
+                <div class="arrow-line-inner"></div>
+                <svg class="svg-arrow-tip" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="trackrecord-last">SIRIUS / CDW</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 3: Infosys Limited -->
+      <section data-theme-section="dark" data-bg-section="dark" class="section-trackrecord-slide">
+        <div class="container">
+          <div class="row-trackrecord">
+            <div class="col-trackrecord-title">
+              <span class="trackrecord-role-badge">Global Delivery</span>
+              <h2 class="trackrecord-h">Senior Associate<br>Consultant</h2>
+            </div>
+
+            <div class="col-trackrecord-quote">
+              <div class="trackrecord-quote">
+                <p>• Fortified mission-critical <strong>banking, retail, and healthcare enterprise platforms</strong> across global client accounts.</p>
+                <p>• Managed static (SAST) and dynamic (DAST) analysis tooling suites (Fortify, Checkmarx, SonarQube, Burp Suite).</p>
+                <p>• Triaged zero-day vulnerabilities, verified proof-of-concept exploits, and facilitated developer remediation sessions.</p>
+                <p>• Streamlined vulnerability tracking and audit readiness across high-throughput agile teams.</p>
+
+                <div class="trackrecord-tags">
+                  <span class="trackrecord-tag">DAST / SAST Automation</span>
+                  <span class="trackrecord-tag">SonarQube / Fortify</span>
+                  <span class="trackrecord-tag">Vulnerability Management</span>
+                  <span class="trackrecord-tag">Secure Code Review</span>
+                </div>
+              </div>
+
+              <!-- Infosys SVG Logo -->
+              <div class="trackrecord-logo" title="Infosys Limited">
+                <svg class="trackrecord-logo-svg" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <text x="5" y="34" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="28" fill="#00a3e0" letter-spacing="-0.5">Infosys</text>
+                  <circle cx="112" cy="18" r="3" fill="#ffffff"/>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-trackrecord-timeline">
+            <div class="row-trackrecord-timeline-inner">
+              <p class="trackrecord-first">BANGALORE &amp; CHENNAI / 2020 — 2022 (2 YEARS)</p>
+              <div class="arrow-line">
+                <div class="arrow-line-inner"></div>
+                <svg class="svg-arrow-tip" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="trackrecord-last">INFOSYS</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Slide 4: Wipro Technologies -->
+      <section data-theme-section="dark" data-bg-section="slate" class="section-trackrecord-slide">
+        <div class="container">
+          <div class="row-trackrecord">
+            <div class="col-trackrecord-title">
+              <span class="trackrecord-role-badge">Foundation &amp; Systems</span>
+              <h2 class="trackrecord-h">Software Engineer<br>(Security &amp; Systems)</h2>
+            </div>
+
+            <div class="col-trackrecord-quote">
+              <div class="trackrecord-quote">
+                <p>• Engineered internal security automation scripts and compliance auditing utilities in <strong>Python &amp; Bash</strong>.</p>
+                <p>• Executed baseline <strong>operating system, network, and Active Directory authentication hardening</strong> across server environments.</p>
+                <p>• Performed enterprise vulnerability scanning (Nessus, Nmap) and remediation verification.</p>
+
+                <div class="trackrecord-tags">
+                  <span class="trackrecord-tag">Active Directory</span>
+                  <span class="trackrecord-tag">Network &amp; System Hardening</span>
+                  <span class="trackrecord-tag">Python Automation</span>
+                  <span class="trackrecord-tag">Security Auditing</span>
+                </div>
+              </div>
+
+              <!-- Wipro SVG Logo -->
+              <div class="trackrecord-logo" title="Wipro Technologies">
+                <svg class="trackrecord-logo-svg" viewBox="0 0 200 50" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <!-- Wipro dots circle -->
+                  <circle cx="15" cy="18" r="4" fill="#e03a3e"/>
+                  <circle cx="27" cy="18" r="4" fill="#009a44"/>
+                  <circle cx="21" cy="30" r="4" fill="#2d3092"/>
+                  <circle cx="9" cy="30" r="4" fill="#fbb034"/>
+                  <text x="42" y="32" font-family="'Plus Jakarta Sans', sans-serif" font-weight="800" font-size="24" fill="#ffffff" letter-spacing="1">wipro</text>
+                </svg>
+              </div>
+            </div>
+          </div>
+
+          <div class="row-trackrecord-timeline">
+            <div class="row-trackrecord-timeline-inner">
+              <p class="trackrecord-first">CHENNAI, INDIA / 2017 — 2020 (2.5 YEARS)</p>
+              <div class="arrow-line">
+                <div class="arrow-line-inner"></div>
+                <svg class="svg-arrow-tip" viewBox="0 0 6 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M1 1L5 5L1 9" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </div>
+              <p class="trackrecord-last">WIPRO</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <!-- ==========================================================================
+         EXPERTISES SECTION (CAPABILITIES GRID)
+         ========================================================================== -->
+    <section id="expertises" data-theme-section="dark" class="section-expertises">
+      <div class="container">
+        <div class="row-expertises-title">
+          <h2 class="h-medium">youR SecuRity x 10?</h2>
+        </div>
+
+        <div class="row-expertises-items">
+          <!-- Col 1 -->
+          <div class="col-expertises-items">
+            <div class="expertises-number">// 01. APPLICATION SECURITY</div>
+            <h3 class="expertises-h">AppSec &amp; API Penetration Testing</h3>
+            <p class="expertises-p">End-to-end security assessments of Web, Mobile (Android/iOS), Thick Client, and REST/GraphQL APIs against OWASP Top 10, ASVS, and business logic flaws.</p>
+          </div>
+
+          <!-- Col 2 -->
+          <div class="col-expertises-items">
+            <div class="expertises-number">// 02. DEVSECOPS ORCHESTRATION</div>
+            <h3 class="expertises-h">CI/CD Pipeline Security Automation</h3>
+            <p class="expertises-p">Seamless integration of automated SAST, DAST, SCA, and container scanning into GitLab CI, GitHub Actions, and Jenkins without slowing engineering release cycles.</p>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="col-expertises-items">
+            <div class="expertises-number">// 03. THREAT MODELING</div>
+            <h3 class="expertises-h">STRIDE Architecture &amp; Zero Trust</h3>
+            <p class="expertises-p">Collaborative threat modeling sessions, data flow diagram decomposition, trust boundary analysis, and attack path neutralization before a single line of production code is written.</p>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="col-expertises-items">
+            <div class="expertises-number">// 04. ACTIVE DIRECTORY &amp; RED TEAM</div>
+            <h3 class="expertises-h">Enterprise Domain Resilience</h3>
+            <p class="expertises-p">CRTP-certified Active Directory assessment: Kerberoasting, AS-REP roasting, BloodHound attack graphs, delegation abuse defense, and domain controller hardening.</p>
+          </div>
+        </div>
+
+        <div class="row-expertises-text">
+          <p>Cybersecurity isn't a theoretical exercise or a checklist. I partner directly with <strong>engineering leaders, architects, and CISOs</strong> to translate offensive vulnerabilities into resilient, automated engineering guardrails.</p>
+        </div>
+      </div>
+
+      <!-- Continuous Infinite Marquee Ticker -->
+      <div class="marquee-group">
+        <div class="marquee" aria-hidden="true">
+          <div class="marquee-content">
+            <div class="marquee-item"><p class="marquee-p">SAST &amp; DAST</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">SCA &amp; DEPENDENCY GOVERNANCE</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">STRIDE THREAT MODELING</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">BURP SUITE PRO</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">ACTIVE DIRECTORY (CRTP)</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">GITLAB CI &amp; JENKINS</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">DOCKER &amp; KUBERNETES</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">OWASP TOP 10 &amp; ASVS</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">CHECKMARX &amp; FORTIFY</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">MITRE ATT&amp;CK</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">BLOODHOUND &amp; MIMIKATZ</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">AZURE CLOUD SECURITY</p><span class="marquee-dot">•</span></div>
+          </div>
+          <div class="marquee-content">
+            <div class="marquee-item"><p class="marquee-p">SAST &amp; DAST</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">SCA &amp; DEPENDENCY GOVERNANCE</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">STRIDE THREAT MODELING</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">BURP SUITE PRO</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">ACTIVE DIRECTORY (CRTP)</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">GITLAB CI &amp; JENKINS</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">DOCKER &amp; KUBERNETES</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">OWASP TOP 10 &amp; ASVS</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">CHECKMARX &amp; FORTIFY</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">MITRE ATT&amp;CK</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">BLOODHOUND &amp; MIMIKATZ</p><span class="marquee-dot">•</span></div>
+            <div class="marquee-item"><p class="marquee-p">AZURE CLOUD SECURITY</p><span class="marquee-dot">•</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CREDENTIALS & CERTIFICATIONS SECTION (LIGHT CONTRAST THEME)
+         ========================================================================== -->
+    <section id="credentials" data-theme-section="light" class="section-credentials">
+      <div class="container">
+        <div class="row-credentials-header">
+          <h2 class="h-medium">cRedentiAls &amp; ceRtifications</h2>
+          <div class="credentials-subtext">Click any badge ID to copy credential</div>
+        </div>
+
+        <div class="credentials-grid">
+          <!-- CRTP -->
+          <div class="credential-card">
+            <div>
+              <div class="credential-top">
+                <span class="credential-badge">Red Team Professional</span>
+                <span class="credential-issuer">Altered Security</span>
+              </div>
+              <h3 class="credential-name">CRTP — Certified Red Team Professional</h3>
+              <p class="credential-description">Practical Active Directory attack methodologies, enterprise domain enumeration, Kerberos exploitation, trust relationship abuse, and lateral movement defense.</p>
+            </div>
+            <div class="credential-meta-row">
+              <button class="credential-id-box copy-btn" data-clipboard="ADLID4579" title="Click to copy credential ID">
+                <span>ID: ADLID4579</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+              <span class="credential-issuer">Active Practitioner</span>
+            </div>
+          </div>
+
+          <!-- CEH v11 -->
+          <div class="credential-card">
+            <div>
+              <div class="credential-top">
+                <span class="credential-badge">Offensive Security</span>
+                <span class="credential-issuer">EC-Council</span>
+              </div>
+              <h3 class="credential-name">CEH v11 — Certified Ethical Hacker</h3>
+              <p class="credential-description">Comprehensive penetration testing methodology, network vulnerability analysis, web application exploitation vectors, social engineering, and perimeter defenses.</p>
+            </div>
+            <div class="credential-meta-row">
+              <button class="credential-id-box copy-btn" data-clipboard="ECC3268107954" title="Click to copy credential ID">
+                <span>ID: ECC3268107954</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+              <span class="credential-issuer">Verified</span>
+            </div>
+          </div>
+
+          <!-- CC (ISC)² -->
+          <div class="credential-card">
+            <div>
+              <div class="credential-top">
+                <span class="credential-badge">Security Governance</span>
+                <span class="credential-issuer">(ISC)²</span>
+              </div>
+              <h3 class="credential-name">CC — Certified in Cybersecurity</h3>
+              <p class="credential-description">Foundational information security principles, incident response, network security concepts, and enterprise access control administration.</p>
+            </div>
+            <div class="credential-meta-row">
+              <button class="credential-id-box copy-btn" data-clipboard="1526990" title="Click to copy credential ID">
+                <span>ID: 1526990</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+              <span class="credential-issuer">Member in Good Standing</span>
+            </div>
+          </div>
+
+          <!-- AZ-900 -->
+          <div class="credential-card">
+            <div>
+              <div class="credential-top">
+                <span class="credential-badge">Cloud Infrastructure</span>
+                <span class="credential-issuer">Microsoft</span>
+              </div>
+              <h3 class="credential-name">AZ-900 — Azure Fundamentals</h3>
+              <p class="credential-description">Cloud concepts, core Azure architectural components, Azure identity, governance, privacy, and cloud compliance foundations.</p>
+            </div>
+            <div class="credential-meta-row">
+              <button class="credential-id-box copy-btn" data-clipboard="H424 7660" title="Click to copy credential ID">
+                <span>ID: H424 7660</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>
+              </button>
+              <span class="credential-issuer">Microsoft Certified</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         SPOTLIGHT PROJECT / PENTEST HUB SECTION (DARK THEME)
+         ========================================================================== -->
+    <section id="hub" data-theme-section="dark" class="section-project-spotlight">
+      <div class="container">
+        <div class="project-spotlight-card">
+          <div>
+            <div class="project-spotlight-badge">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+              <span>OPEN SOURCE SECURITY KNOWLEDGE HUB</span>
+            </div>
+            <h2 class="project-spotlight-h">HawkWheels Pentest Portal</h2>
+            <p class="project-spotlight-desc">A curated, interactive knowledge portal for cybersecurity practitioners featuring comprehensive penetration testing workflows, Active Directory enumeration commands, privilege escalation cheat sheets, and web vulnerability analysis methodologies.</p>
+
+            <div class="project-spotlight-actions">
+              <a href="https://hawkwheels.github.io/pentest-reference-site/#/" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-primary">
+                <span>Open Pentest Hub</span>
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+              </a>
+              <a href="https://github.com/hawkwheels" target="_blank" rel="noopener noreferrer" class="btn-editorial btn-editorial-outline">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub Profile</span>
               </a>
             </div>
           </div>
 
+          <!-- Code / Visual Box -->
+          <div class="project-spotlight-preview">
+            <div style="color: #64748b; margin-bottom: 0.5rem;">// Active Directory &amp; Web Exploitation Reference</div>
+            <div><span class="code-pill">$</span> hawkwheels --topic "active-directory-kerberos"</div>
+            <div style="color: #94a3b8; margin: 0.35rem 0;">[+] Initializing BloodHound attack path mapping...</div>
+            <div style="color: #94a3b8;">[+] Extracting SPNs: Kerberoastable accounts flagged.</div>
+            <div><span class="code-pill">$</span> hawkwheels --topic "stride-threat-model"</div>
+            <div style="color: #38bdf8;">[+] Architecture Review: Trust boundaries secured.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==========================================================================
+         CONTACT & SIGNATURE FOOTER (NICK VELTEN SIGNATURE CLOSING)
+         ========================================================================== -->
+    <section id="contact" data-theme-section="light" class="section-footer">
+      <div class="container">
+        <!-- Socials & Direct Email Row -->
+        <div class="row-footer-socials">
+          <div class="col-footer-socials">
+            <div>
+              <a href="mailto:varunraj995@gmail.com?subject=Strategic%20Security%20Inquiry" class="link-email">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                <span>varunraj995@gmail.com</span>
+              </a>
+            </div>
+
+            <div class="social-pills-row">
+              <a href="https://www.linkedin.com/in/varunraj-amirtharaj-35b59512a/?isSelfProfile=true" target="_blank" rel="noopener noreferrer" class="link-social">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+                <span>LinkedIn</span>
+              </a>
+
+              <a href="https://github.com/hawkwheels" target="_blank" rel="noopener noreferrer" class="link-social">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                <span>GitHub</span>
+              </a>
+
+              <a href="https://hawkwheels.github.io/pentest-reference-site/#/" target="_blank" rel="noopener noreferrer" class="link-social">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span>Pentest Hub</span>
+              </a>
+
+              <a href="assets/Varunraj_Amirtharaj_Resume.pdf" download="Varunraj_Amirtharaj_Resume.pdf" class="link-social">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                <span>Resume (PDF)</span>
+              </a>
+            </div>
+          </div>
+
+          <!-- Curved SVG Connecting Arrow Line (Direct from Nick Velten) -->
+          <div class="col-footer-arrow" aria-hidden="true">
+            <svg class="svg-arrow-line-footer" viewBox="0 0 929 92" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M928 1L728 1C701.886 1 590.681 5.17533 575.515 53.8327C560.5 102.005 633 104.005 618 52.4996C603 0.994038 518 1 496.5 1H1" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+              <path d="M5 1L1 3L5 5" stroke="currentColor" stroke-width="1.5" vector-effect="non-scaling-stroke"/>
+            </svg>
+          </div>
         </div>
 
+        <!-- Dennis Snellenberg Signature Giant Name with Embedded Photo Capsule -->
+        <div class="row-footer-title">
+          <h2 class="footer-h2">
+            <span class="footer-h2-span-first">
+              <span class="lower-case">Varunraj</span>
+            </span>
+            <div class="footer-image-capsule">
+              <img src="assets/profile.jpg" alt="Varunraj Amirtharaj" class="footer-capsule-img" loading="lazy">
+            </div>
+            <div class="footer-h2-span-last">
+              <span class="lower-case">A</span><span class="upper-case">m</span><span class="lower-case">irtharaj</span>
+            </div>
+          </h2>
+        </div>
+
+        <!-- Bottom Copyright & Back to Top -->
+        <div class="row-footer-links">
+          <div class="col-footer-links-copyright">
+            <p>© 2026 Varunraj Amirtharaj <span class="dot-separator">•</span> Senior Security Consultant</p>
+          </div>
+          <div>
+            <p>Design inspired by Nick Velten / Dennis Snellenberg</p>
+          </div>
+          <div class="col-footer-links-credits">
+            <a href="#header" class="link-back-to-top">
+              <span>Back to top</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg>
+            </a>
+          </div>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- RESUME PREVIEW MODAL -->
-  <div class="modal-backdrop" id="resume-modal" role="dialog" aria-modal="true" aria-labelledby="modal-cv-title">
-    <div class="modal-window">
-      <div class="modal-header">
-        <div class="modal-title" id="modal-cv-title">
-          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--cyan-liquid)" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>
-          <span>Varunraj Amirtharaj — Official Resume</span>
-        </div>
-        <div style="display: flex; align-items: center; gap: 12px;">
-          <a href="assets/Varunraj_Amirtharaj_Resume.pdf" download="Varunraj_Amirtharaj_Resume.pdf" class="btn btn-liquid-primary btn-sm">
-            <span>Download PDF</span>
-          </a>
-          <button class="btn-close-modal" id="btn-close-modal" aria-label="Close Modal">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
-          </button>
-        </div>
-      </div>
-      <div class="modal-body">
-        <iframe src="assets/Varunraj_Amirtharaj_Resume.pdf" class="resume-iframe" title="Resume PDF"></iframe>
-      </div>
-    </div>
+  <!-- Toast Notification for Credential ID Copy -->
+  <div class="toast-notification" id="toast" role="status" aria-live="polite">
+    Copied to clipboard!
   </div>
 
-  <!-- TOAST NOTIFICATION -->
-  <div class="toast-pill" id="toast-box">
-    <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
-    <span id="toast-message">Copied to clipboard!</span>
-  </div>
-
-  <!-- STREAMLINED FOOTER -->
-  <footer class="streamlined-footer">
-    <div class="container footer-inner">
-      <div>
-        <strong>Varunraj Amirtharaj</strong> • Senior Security Consultant (AppSec & DevSecOps)
-      </div>
-      <div style="font-family: var(--font-mono); font-size: 11.5px;">
-        CRTP • CEH v11 • CC (ISC2) • AZ-900
-      </div>
-    </div>
-  </footer>
-
-  <!-- Scripts -->
+  <!-- JavaScript -->
   <script src="js/main.js"></script>
 </body>
 </html>
